@@ -6,7 +6,7 @@ namespace ValkemediaDisableTrackbackSpam;
 Plugin Name: Valkemedia Disable trackback & spam
 Plugin URI: https://valkemedia.nl/
 Description: Disable comments, trackback & spam, remove wp_generator tag from wp theme
-Version: 1.0.1
+Version: 1.0.3
 Update URI: https://github.com/wimwam/wp-valkemedia-disable-trackback-and-spam
 Author: Wiebe-Jan Valkema
 Author URI: https://valkemedia.nl/
@@ -32,7 +32,7 @@ class valkemedia_disable_trackback_and_spam
         new GitHubUpdater(
             'wimwam/wp-valkemedia-disable-trackback-and-spam',
             plugin_basename(__FILE__),
-            '1.0.1',
+            '1.0.3',
             'valkemedia-disable-trackback-and-spam'
         );
 
