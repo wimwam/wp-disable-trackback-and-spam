@@ -17,20 +17,20 @@ jobs:
 
       - name: Build plugin ZIP
         run: |
-          mkdir valkemedia-disable-trackback-and-spam
+          mkdir wp-disable-trackback-and-spam
 
           rsync -av \
             --exclude='.git' \
             --exclude='.github' \
-            --exclude='valkemedia-disable-trackback-and-spam' \
-            ./ valkemedia-disable-trackback-and-spam/
+            --exclude='wp-disable-trackback-and-spam' \
+            ./ wp-disable-trackback-and-spam/
 
           zip -r \
-            "valkemedia-disable-trackback-and-spam-${{ github.event.release.tag_name }}.zip" \
-            valkemedia-disable-trackback-and-spam
+            "wp-disable-trackback-and-spam-${{ github.event.release.tag_name }}.zip" \
+            wp-disable-trackback-and-spam
 
       - name: Upload ZIP to GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.release.tag_name }}
-          files: valkemedia-disable-trackback-and-spam-${{ github.event.release.tag_name }}.zip
+          files: wp-disable-trackback-and-spam-${{ github.event.release.tag_name }}.zip
